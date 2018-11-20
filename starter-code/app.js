@@ -8,18 +8,18 @@ const app = express();
 app.use(express.static('public'));
 
 // our first Route:
-app.get('/', (request, response, next) => {
-  response.sendFile(__starter-code + '/views/home-page.html');
+app.get('/home-page', (request, response, next) => {
+  response.sendFile(__dirname + '/views/home-page.html');
 });
 
 // chocolate route:
 app.get('/chocolate', (request, response, next) => {
-  response.sendFile(__starter-code + '/views/about.html');
+  response.sendFile(__dirname+ '/views/about.html');
 });
 
 // gallery route :
 app.get('/gallery', (request, response, next) => {
-  response.sendFile(__starter-code + '/views/gallery.html');
+  response.sendFile(__dirname + '/views/gallery.html');
 });
 
 // Server Started
