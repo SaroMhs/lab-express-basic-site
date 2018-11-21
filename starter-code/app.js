@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static('public'));
 
 // our first Route:
-app.get('/home-page', (request, response, next) => {
+app.get('/', (request, response, next) => {
   response.sendFile(__dirname + '/views/home-page.html');
 });
 
